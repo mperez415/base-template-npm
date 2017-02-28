@@ -4,7 +4,6 @@
   "description": "Squarespace Base Template using NPM",
   "author": "Squarespace, Inc.",
   "license": "Apache-2.0",
-  "private": true,
   "scripts": {
     "build": "squarespace assemble && webpack --display-modules",
     "watch": "squarespace assemble --watch & webpack --watch --hide-modules",
