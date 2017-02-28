@@ -21,3 +21,34 @@ h1 {
 nav {
   margin-bottom: 20px;
 }
+
+// handles ajax fadein/fadeout
+.mercury-transition-wrapper {
+  position: relative;
+  z-index: 15;
+
+  .transition(~'opacity 400ms 0ms ease-in');
+
+  &.fade {
+    opacity: 0;
+    .transition(~'opacity 500ms 0ms ease');
+  }
+}
+
+.has-index-nav .mercury-transition-wrapper {
+  .transition(~'opacity 400ms 0ms ease-in');
+
+  &.fade {
+    opacity: 0;
+    .transition(~'opacity 300ms 200ms ease');
+  }
+}
+
+.index-nav {
+	.transition(~'opacity 100ms 400ms ease-in');
+}
+
+.mercury-transition-wrapper.fade + .index-nav {
+	opacity: 0;
+	.transition(~'opacity 200ms 0ms ease-in');
+}

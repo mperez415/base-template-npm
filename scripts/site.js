@@ -1,3 +1,9 @@
+// polyfills
+require('classlist-polyfill');
+
+// imports
+import controller from '@squarespace/controller';
+import SiteLoader from './controllers/SiteLoader';
 
 // Use the sqs-core module to access core Squarespace
 // functionality, like Lifecycle and ImageLoader. For
@@ -18,3 +24,6 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
 });
+
+// controllers
+controller.register('SiteLoader', SiteLoader);
